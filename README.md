@@ -1,4 +1,4 @@
-#h1 Ethan Vincze
-#h2 About Me
+# Ethan Vincze
+## About Me
 ##
-#h1 Test
+# Test
