@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Dubai, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: dimgray;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #4a4a4a;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .nav-link {
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+
+            .nav-link:hover {
+                background-color: #666;
+                color: white;
+            }
+
+            .nav-link::after {
+                content: '';
+                display: block;
+                height: 2px;
+                width: 0;
+                background: white;
+                transition: width .3s;
+            }
+
+            .nav-link:hover::after {
+                width: 100%;
+            }
+
+        .container {
+            width: 80%;
+            display: table;
+            justify-content: center;
+            align-items: center;
+            background-color: dimgrey;
+            border-radius: 10px;
+            padding: 0;
+            margin: 0 auto;
+            /*background-color: green;*/
+        }
+
+        .project {
+            margin-top: 20px;
+            width: 65%;
+/*            max-width: 600px;*/
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            /*background-color: red;*/
+        }
+
+            .project img {
+                width: 70%; /* Adjust the width as needed */
+                max-width: 400px;
+                border: 3px solid black;
+                border-radius: 5px; /* Add border radius */
+            }
+
+            .project p {
+                margin-left: 20px;
+
+                color: whitesmoke;
+                font-size: 18px;
+                max-height: 95%;
+                flex-wrap: wrap;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="nav-link">About Me</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+    </div>
+    <div class="container">
+        <div class="project">
+            <img src="images/image.png" alt="Cells At War Image">
+            <p>
+                This was a game that I worked on called "The Playtester" that was created for the 2024 TO Jam. Me and 2 other programmers completed this game in 2.5 days.
+                My duties during the development of the game include the player movement and input, creating UI menus such as a pause menu and a settings menu. I also created the audio system for voice lines and sound effects.
+            </p>
+        </div>
+        <div class="project">
+            <img src="images/RPG (1).gif" alt="RPG Image">
+            <p>Voila My RPG</p>
+        </div>
+        <div class="project">
+            <img src="images/image.png" alt="Project">
+            <p>Test Writing</p>
+        </div>
+    </div>
+</body>
+</html>
