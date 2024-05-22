@@ -82,6 +82,31 @@
             max-width: 600px;
         }
 
+        .contact {
+            width: 50px;
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Horizontally center the items */
+            align-items: center; /* Vertically center the items */
+            margin: 0 auto;
+        }
+
+            .contact .contact-link {
+                display: inline-block; /* Ensure only image area is clickable */
+            }
+
+            .contact img {
+                max-width: 100px;
+                max-height: 100px;
+                opacity: 1;
+                transition: opacity 0.3s; /* Move transition property here to ensure smooth transition */
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+
+                .contact img:hover {
+                    opacity: 0.2; /* Change opacity here */
+                }
+
         .skills {
             display: flex;
             justify-content: space-around;
@@ -91,6 +116,7 @@
                 text-align: center;
                 font-size: 22px;
                 margin-bottom: 10px;
+                color: #32127a;
             }
 
             .skills ul {
@@ -108,6 +134,7 @@
                 width: 200px;
                 font-size: 17px;
             }
+
     </style>
 </head>
 <body>
@@ -132,6 +159,7 @@
                     <li>HTML & CSS</li>
                 </ul>
             </div>
+
             <div class="tools">
                 <h2>Framework / Tools</h2>
                 <ul>
@@ -142,6 +170,15 @@
                     <li>Unity</li>
                 </ul>
             </div>
+        </div>
+
+        <div class="contact">
+            <a href="https://github.com/evincze" target="_blank" class="contact-link">
+                <img src="images/Github.png" alt="GitHub Link">
+            </a>
+            <a href="https://www.linkedin.com/in/ethan-vincze-97b8b62a4/" target="_blank" class="contact-link">
+                <img src="images/Linkedin.png" alt="LinkedIn Link">
+            </a>
         </div>
     </div>
 </body>
