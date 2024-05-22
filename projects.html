@@ -1,17 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Vincze</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Projects</title>
     <style>
         body {
             font-family: Dubai, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: dimgray;
+            background-color: #967bb6;
             color: #333;
         }
 
@@ -50,71 +48,168 @@
                 width: 100%;
             }
 
-        .container {
-            width: 80%;
-            display: table;
-            justify-content: center;
+        .content {
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            background-color: dimgrey;
-            border-radius: 10px;
-            padding: 0;
-            margin: 0 auto;
-            /*background-color: green;*/
+            padding: 20px;
         }
 
         .project {
-            margin-top: 20px;
-            width: 65%;
-/*            max-width: 600px;*/
-            padding: 20px;
-            border-radius: 10px;
-            text-align: left;
             display: flex;
-            align-items: center;
-            margin: 0 auto;
-            /*background-color: red;*/
+            background-color: #555;
+            margin: 10px 0;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            position: relative;
         }
 
-            .project img {
-                width: 70%; /* Adjust the width as needed */
-                max-width: 400px;
-                border: 3px solid black;
-                border-radius: 5px; /* Add border radius */
+        .slideshow-container {
+            position: relative;
+            width: 30%;
+            margin-right: 20px;
+            overflow: hidden;
+            height: 200px; /* Fixed height for the container */
+        }
+
+            .slideshow-container img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 10px;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
             }
 
-            .project p {
-                margin-left: 20px;
+                .slideshow-container img.active {
+                    opacity: 1;
+                }
 
-                color: whitesmoke;
-                font-size: 18px;
-                max-height: 95%;
-                flex-wrap: wrap;
+        .description {
+            flex: 1;
+            overflow-y: auto;
+            display: block;
+        }
+
+            .description h1 {
+                color: #32127a;
+                font-size: 25px;
+                font-weight: bolder;
             }
+
+        .description p
+        {
+            color: whitesmoke;
+            font-size: 19px;
+            font-weight: bold; 
+        }
+
+        .description hr {
+            border: 1px solid black;
+            opacity: 0.2;
+        }
 
     </style>
 </head>
 <body>
+
     <div class="navbar">
         <a href="index.html" class="nav-link">About Me</a>
         <a href="resume.html" class="nav-link">Resume</a>
         <a href="projects.html" class="nav-link">Projects</a>
     </div>
-    <div class="container">
+
+    <div class="content">
         <div class="project">
-            <img src="images/3.gif" alt="The Playtester Gif">
-            <p>
-                This was a game that I worked on called "The Playtester" that was created for the 2024 TO Jam. Me and 2 other programmers completed this game in 2.5 days.
-                My duties during the development of the game include the player movement and input, creating UI menus such as a pause menu and a settings menu. I also created the audio system for voice lines and sound effects.
-            </p>
+            <div class="slideshow-container">
+                <img class="active" src="images/1.png" alt="Image 1">
+                <img src="images/2.gif" alt="Image 2">
+                <img src="images/3.gif" alt="Image 3">
+            </div>
+            <div class="description">
+
+                <h1>The Playtester - Binary Bandits</h1>
+                <hr />
+                <p>
+                    This was a game that I worked on called "The Playtester" that was created for the 2024 TO Jam. Me and 2 other programmers completed this game in 2.5 days.
+                    My duties during the development of the game include the player movement and input, creating UI menus such as a pause menu and a settings menu. I also created the audio system for voice lines and sound effects.
+                </p>
+                <iframe height="167" frameborder="0" src="https://itch.io/embed/2704069" width="552"><a href="https://binarybandits.itch.io/the-playtest">The Playtester by BinaryBandits</a></iframe>
+            </div>
         </div>
         <div class="project">
-            <img src="images/RPG (1).gif" alt="RPG Image">
-            <p>Voila My RPG</p>
+            <div class="slideshow-container">
+                <img class="active" src="images/RPG (1).gif" alt="Image 4">
+                <img src="images/RPG (2).gif" alt="Image 5">
+                <img src="images/RPG (3).gif" alt="Image 6">
+            </div>
+            <div class="description">
+
+                <h1>RPG Project - George Brown College</h1>
+                <hr />
+                <p>
+                    This is a school project that I worked on in my second year of college where I was tasked with creating an RPG game. I worked on this project completely by myself, I created an audio system, battle system, dialogue system, etc. I also worked on the player and NPC movement,
+                    main menu screen, settings screen and also the pause screen. For the battle system I have a feature similar to Earthbound where depending on how the battle starts, either the player or the enemy will have advantage in battle with a first move. In my battle
+                    system there is also elemental damage depending on the attack type the player uses and the enemy's element type.
+                </p>
+            </div>
         </div>
         <div class="project">
-            <img src="images/image.png" alt="Project">
-            <p>Test Writing</p>
+            <div class="slideshow-container">
+                <img class="active" src="images/image.png" alt="Image 7">
+                <img src="images/image (1).png" alt="Image 8">
+                <img src="images/image (2).png" alt="Image 9">
+            </div>
+            <div class="description">
+
+                <h1>Cells At War (Nucleus Minigame) - George Brown College / McMasters University</h1>
+                <hr />
+                <p>
+                    This is a minigame that I worked on during my third year at George Brown College. I was asked if I wanted to participate in creating a game for Biology Students at McMaster University. I was giving the task to program a system to generate certain nucleotides as the game progresses.
+                    I programmed a way to move the groups of DNA across the screen to wait for the players input and created a way to undo the last move and retry.
+                </p>
+            </div>
         </div>
+
+        <div class="project">
+            <div class="slideshow-container">
+                <img class="active" src="images/Crafting1.gif" alt="Image 7">
+                <img src="images/Crafting2.gif" alt="Image 8">
+            </div>
+            <div class="description">
+
+                <h1>Minecraft Crafting System - George Brown College</h1>
+                <hr />
+                <p>
+                    This is a project that I worked on for one of my classes at George Brown. I was given the task to create a crafting system similar to Minecraft.
+                </p>
+            </div>
+        </div>
+
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slideshows = document.querySelectorAll('.slideshow-container');
+
+            slideshows.forEach(slideshow => {
+                const slides = slideshow.querySelectorAll('img');
+                let currentSlide = 0;
+
+                function showNextSlide() {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }
+
+                setInterval(showNextSlide, 4500);
+            });
+        });
+    </script>
+
 </body>
 </html>
